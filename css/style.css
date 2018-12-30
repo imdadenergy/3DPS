@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   text-align: justify;
 }
@@ -7,16 +11,13 @@ section {
   width: 100vw;
   background-color: #f2f2f2;
   text-align: center;
+  padding-top: 50px;
 }
 
 @media screen and (max-width: 1024px) {
   section {
     height: 60vh;
   }
-}
-
-#home .container .col-6 {
-  padding-top: 50px;
 }
 
 #home .container .description {
@@ -63,6 +64,7 @@ section {
 #clients {
   background-color: #ac4591;
   color: #f2f2f2;
+  height: 40vh;
 }
 
 #clients .container .row .main-title {
@@ -80,5 +82,18 @@ section {
 
 #contact .container .row .main-title {
   margin-bottom: 20px;
+}
+
+#contact .container .row form {
+  width: 60%;
+}
+
+#contact .container .row form .col .row {
+  margin: 10px 0px;
+  padding: 10px 0px;
+}
+
+#contact .container .row form .col .row input:focus {
+  background-color: #ac4591;
 }
 /*# sourceMappingURL=style.css.map */
