@@ -1,1 +1,84 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+body {
+  text-align: justify;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  section {
+    height: 60vh;
+  }
+}
+
+#home .container .col-6 {
+  padding-top: 50px;
+}
+
+#home .container .description {
+  height: 100%;
+}
+
+#home .container .description h1 {
+  text-align: center;
+  color: #ac4591;
+  font-size: 2em;
+}
+
+#home .container .description button {
+  border-color: #27245f;
+  background-color: #ac4591;
+}
+
+#home .container .description > * {
+  margin: 10px 0px;
+}
+
+#about {
+  background-color: #ac4591;
+  color: #f2f2f2;
+}
+
+#about .container .row .main-title {
+  margin-bottom: 20px;
+}
+
+#about .container .row .card-group > * {
+  margin: 10px;
+  padding: 10px;
+}
+
+#about .container .row .card-group .card {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#service .container .row .main-title {
+  margin-bottom: 20px;
+}
+
+#clients {
+  background-color: #ac4591;
+  color: #f2f2f2;
+}
+
+#clients .container .row .main-title {
+  margin-bottom: 20px;
+}
+
+#projects .container .row .main-title {
+  margin-bottom: 20px;
+}
+
+#contact {
+  background-color: #ac4591;
+  color: #f2f2f2;
+}
+
+#contact .container .row .main-title {
+  margin-bottom: 20px;
+}
+/*# sourceMappingURL=style.css.map */
