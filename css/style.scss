@@ -1,0 +1,138 @@
+$cb:#27245f;
+$cp:#ac4591;
+$cw:#f2f2f2;
+html{
+    scroll-behavior: smooth;
+}
+body{
+    // height:100vh;
+    // width:100vw;
+    text-align: justify;
+}
+section{
+    height: 100vh;
+    width:  100vw;
+    background-color: $cw;
+    text-align: center;
+    padding-top:50px;
+    @media screen and (max-width:1024px) {
+        height: 60vh;
+        // padding: 50px;
+    }
+}
+
+#home{
+    .container{
+        .col-6{
+            // padding-top:50px;
+        }
+        .description{
+            height: 100%;
+            h1{
+                text-align: center;
+                color: $cp;
+                font-size: 2em;
+            }
+            button{
+                border-color: $cb;
+                background-color: $cp;
+            }
+            >*{
+                margin: 10px 0px;
+            }
+        }
+    }
+}
+
+#about{      
+    background-color: $cp;
+    color: #f2f2f2;
+    .container{
+        .row{
+            .main-title{
+                margin-bottom: 20px;
+            }
+            .card-group{
+                >*{
+                    margin:10px;
+                    padding:10px;
+                }
+                .card{
+                    background-color: rgba($color: #000000, $alpha: 0);
+                    .card-img-top{
+
+                    }
+                    .card-body{
+                        .card-title{
+
+                        }   
+                        .card-text{
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#service {
+    // background-color: $cp;
+    // color: #f2f2f2;
+
+    .container {
+        .row {
+            .main-title {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+#clients {
+    background-color: $cp;
+    color: #f2f2f2;
+    height:40vh;
+
+    .container {
+        .row {
+            .main-title {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+#projects {
+    // background-color: $cp;
+    // color: #f2f2f2;
+
+    .container {
+        .row {
+            .main-title {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+#contact {
+    background-color: $cp;
+    color: #f2f2f2;
+
+    .container {
+        .row {
+            .main-title {
+                margin-bottom: 20px;
+            }
+            form{
+                width: 60%;
+                .col{
+                    .row{
+                        margin:10px 0px;
+                        padding:10px 0px;
+                        input:focus{
+                            background-color: $cp;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
