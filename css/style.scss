@@ -10,18 +10,19 @@ body{
     text-align: justify;
 }
 section{
-    height: 100vh;
+    max-height: 100vh;
     width:  100vw;
     background-color: $cw;
     text-align: center;
     padding-top:50px;
     @media screen and (max-width:1024px) {
-        height: 60vh;
+        max-height: 200vh;
         // padding: 50px;
     }
 }
 
 #home{
+    height:100vh;
     .container{
         .col-6{
             // padding-top:50px;
