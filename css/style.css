@@ -1,15 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Asap|Roboto|Work+Sans");
 html {
   scroll-behavior: smooth;
 }
 
 body {
   text-align: justify;
+  font-family: 'Roboto', sans-serif;
 }
 
 section {
   background-color: #f2f2f2;
   text-align: center;
   padding-top: 80px;
+  padding-bottom: 40px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -18,6 +21,15 @@ section {
     padding-top: 70px;
     grid-gap: 0;
   }
+}
+
+section:nth-of-type(2n) {
+  background-color: #ac4591;
+  color: #f2f2f2;
+}
+
+section:nth-of-type(2n+1) {
+  color: #27245f;
 }
 
 #home {
@@ -30,22 +42,37 @@ section {
 }
 
 #home .container .description {
+  font-family: 'Work Sans', sans-serif;
   height: 100%;
   margin: 0;
 }
 
 #home .container .description h1 {
-  text-align: justify;
   color: #ac4591;
+  text-align: justify;
   font-size: 2em;
+  font-weight: 500;
   text-align: center;
+}
+
+#home .container .description h5 {
+  color: #27245f;
+}
+
+#home .container .description a:hover,
+#home .container .description a:active,
+#home .container .description a:focus {
+  border: none;
+  text-decoration: none;
 }
 
 #home .container .description button {
   text-align: center;
   padding: 0.7em 3em;
   border-color: #27245f;
+  border-radius: 2em;
   background-color: #ac4591;
+  color: #f2f2f2;
 }
 
 #home .container .description button:hover {
@@ -56,9 +83,30 @@ section {
   padding: 10px 10px;
 }
 
-#about {
-  background-color: #ac4591;
-  color: #f2f2f2;
+#service .container .row {
+  margin: 1em;
+  padding: 2em;
+  border-radius: 3em;
+}
+
+#service .container .row .col-12 p {
+  text-align: justify;
+  font-weight: 500;
+  margin: 0;
+  color: #27245f;
+}
+
+#service .container .row:nth-of-type(n+2) {
+  background-color: #f2f2f2;
+  color: #ac4591;
+}
+
+#projects .container .row .main-title {
+  margin-bottom: 20px;
+}
+
+#clients .container .row .main-title {
+  margin-bottom: 20px;
 }
 
 #about .container .row .main-title p {
@@ -74,34 +122,18 @@ section {
   margin: 10px;
 }
 
-#service .container .row .main-title {
-  margin-bottom: 20px;
-}
-
-#clients {
-  background-color: #ac4591;
-  color: #f2f2f2;
-}
-
-#clients .container .row .main-title {
-  margin-bottom: 20px;
-}
-
-#projects .container .row .main-title {
-  margin-bottom: 20px;
-}
-
-#contact {
-  background-color: #ac4591;
-  color: #f2f2f2;
-}
-
 #contact .container .row .main-title {
   margin-bottom: 20px;
 }
 
 #contact .container .row form {
   width: 60%;
+}
+
+@media screen and (max-width: 1024px) {
+  #contact .container .row form {
+    width: 80%;
+  }
 }
 
 #contact .container .row form .col .row {

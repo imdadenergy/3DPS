@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Asap|Roboto|Work+Sans');
 $cb:#27245f;
 $cp:#ac4591;
 $cw:#f2f2f2;
@@ -6,9 +7,9 @@ html {
 }
 
 body {
-    // height:100vh;
-    // width:100vw;
     text-align: justify;
+    font-family: 'Roboto', sans-serif; // font-family: 'Work Sans', sans-serif;
+    // font-family: 'Asap', sans-serif;
 }
 
 section {
@@ -17,12 +18,22 @@ section {
     background-color: $cw;
     text-align: center;
     padding-top: 80px;
+    padding-bottom: 40px;
     @media screen and (max-width: 1024px) {
         // max-height: 200vh;
         padding: 1em;
         padding-top: 70px;
         grid-gap: 0;
     }
+}
+
+section:nth-of-type(2n) {
+    background-color: $cp;
+    color: $cw;
+}
+
+section:nth-of-type(2n+1) {
+    color: $cb;
 }
 
 #home {
@@ -34,39 +45,96 @@ section {
             margin: 0;
         }
         .description {
+            font-family: 'Work Sans', sans-serif;
             height: 100%;
             margin: 0;
             h1 {
-                text-align: justify;
                 color: $cp;
+                text-align: justify; // color: $cp;
                 font-size: 2em;
+                font-weight: 500;
                 text-align: center;
+            }
+            h5 {
+                color: $cb;
+            }
+            a:hover,
+            a:active,
+            a:focus {
+                // cursor:pointer;
+                border:none;
+                text-decoration: none;
             }
             button {
                 text-align: center;
-                padding:0.7em 3em;
-                // width:50%;
+                padding: 0.7em 3em;
                 border-color: $cb;
+                border-radius: 2em;
                 background-color: $cp;
+                color:$cw;
+                // @media screen and (max-width:1024px){
+                //     padding:0.7em 3em;
+                // }
             }
-            button:hover{
+            button:hover {
                 cursor: pointer;
             }
-            >*{
-                padding:10px 10px;
+            >* {
+                padding: 10px 10px;
+            }
+        }
+    }
+}
+
+#service {
+    .container {
+        .row {
+            margin: 1em;
+            padding: 2em;
+            border-radius: 3em; // border:2px solid white;
+            .main-title {
+                // margin-bottom: 20px;
+            }
+            .col-12 {
+                p {
+                    text-align: justify;
+                    font-weight: 500;
+                    margin: 0;
+                    color:$cb;
+                }
+            }
+        }
+        .row:nth-of-type(n+2) {
+            background-color: $cw;
+            color: $cp;
+        }
+    }
+}
+
+#projects {
+    .container {
+        .row {
+            .main-title {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+#clients {
+    .container {
+        .row {
+            .main-title {
+                margin-bottom: 20px;
             }
         }
     }
 }
 
 #about {
-    background-color: $cp;
-    color: #f2f2f2;
-    // padding: 10px;
     .container {
         .row {
             .main-title {
-                // margin-bottom: 20px;
                 p {
                     text-align: justify;
                 }
@@ -76,6 +144,7 @@ section {
                     margin: 10px; // padding:10px;
                 }
                 .card {
+                    // height: 60px;
                     background-color: rgba($color: #000000, $alpha: 0);
                     margin: 10px;
                     .card-img-top {}
@@ -89,45 +158,7 @@ section {
     }
 }
 
-#service {
-    // background-color: $cp;
-    // color: #f2f2f2;
-    .container {
-        .row {
-            .main-title {
-                margin-bottom: 20px;
-            }
-        }
-    }
-}
-
-#clients {
-    background-color: $cp;
-    color: #f2f2f2; // height:40vh;
-    .container {
-        .row {
-            .main-title {
-                margin-bottom: 20px;
-            }
-        }
-    }
-}
-
-#projects {
-    // background-color: $cp;
-    // color: #f2f2f2;
-    .container {
-        .row {
-            .main-title {
-                margin-bottom: 20px;
-            }
-        }
-    }
-}
-
 #contact {
-    background-color: $cp;
-    color: #f2f2f2;
     .container {
         .row {
             .main-title {
@@ -135,6 +166,9 @@ section {
             }
             form {
                 width: 60%;
+                @media screen and (max-width: 1024px) {
+                    width:80%;
+                }
                 .col {
                     .row {
                         margin: 10px 0px;
