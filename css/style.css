@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Asap|Roboto|Work+Sans");
+@import url("https://fonts.googleapis.com/css?family=Asap|Roboto|Work+Sans|Quicksand:300");
 html {
   scroll-behavior: smooth;
 }
 
 body {
   text-align: justify;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 section {
@@ -33,6 +33,7 @@ section:nth-of-type(2n+1) {
 }
 
 #home {
+  font-family: 'Roboto', sans-serif;
   min-height: 100vh;
 }
 
@@ -105,47 +106,14 @@ section:nth-of-type(2n+1) {
   }
 }
 
-@media screen and (max-width: 1024px) {
-  #service .container .row .col-12 .fas {
-    margin-bottom: .3em;
-  }
-}
-
-#service .container .row .col-12 p {
-  text-align: justify;
-  font-size: 1.3em;
-  font-weight: 500;
-  margin: 0;
-  color: #27245f;
+#service .container .row .col-12 img {
+  max-height: 60px;
+  max-width: 60px;
+  color: #f2f2f2;
 }
 
 #service .container .row:nth-of-type(n+2) {
-  background-color: #f2f2f2;
-  color: #ac4591;
-}
-
-#service .container .building:hover .fa-building {
-  color: #27245f;
-}
-
-#service .container .leaf:hover .fa-leaf {
-  color: darkgreen;
-}
-
-#service .container .recycle:hover .fa-recycle {
-  color: orange;
-}
-
-@media screen and (max-width: 1024px) {
-  #service .container .fa-building {
-    color: #27245f;
-  }
-  #service .container .fa-leaf {
-    color: darkgreen;
-  }
-  #service .container .fa-recycle {
-    color: orange;
-  }
+  color: #f2f2f2;
 }
 
 #whyus .container .mycard-holder {
@@ -154,22 +122,25 @@ section:nth-of-type(2n+1) {
 
 #whyus .container .mycard-holder .mycard {
   border-right: 1px solid #ac4591;
-  border-radius: 3em;
   padding: 0;
   margin: 0;
 }
 
 #whyus .container .mycard-holder .mycard .cardimg {
-  border: 1px solid #ac4591;
-  border-radius: 50px;
-  min-height: 60px;
-  min-width: 60px;
   padding: .3em;
   margin: 0;
 }
 
+#whyus .container .mycard-holder .mycard .cardimg img {
+  max-height: 50px;
+}
+
 #whyus .container .mycard-holder .mycard .cardtext p {
   margin: 0;
+}
+
+#projects img {
+  border: 1px solid #f2f2f2;
 }
 
 #clients .container .row .main-title {
@@ -183,6 +154,10 @@ section:nth-of-type(2n+1) {
 #about .container .col-12 .row .location-info img {
   max-width: 100%;
   border: 1px solid #ac4591;
+}
+
+#contact .container .row {
+  width: 100%;
 }
 
 #contact .container .row .main-title {
@@ -205,7 +180,17 @@ section:nth-of-type(2n+1) {
 }
 
 #contact .container .row form .col .row input:focus {
-  background-color: #ac4591;
+  background-color: #f2f2f2;
+}
+
+footer {
+  height: 25px;
+  text-align: center;
+}
+
+footer p {
+  color: #ac4591;
+  margin: 0;
 }
 
 .btn:focus,

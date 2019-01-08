@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Asap|Roboto|Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Asap|Roboto|Work+Sans|Quicksand:300');
 $cb:#27245f;
 $cp:#ac4591;
 $cw:#f2f2f2;
@@ -7,9 +7,10 @@ html {
 }
 
 body {
-    text-align: justify;
-    font-family: 'Roboto', sans-serif; // font-family: 'Work Sans', sans-serif;
+    text-align: justify; // font-family: 'Roboto', sans-serif; 
+    // font-family: 'Work Sans', sans-serif;
     // font-family: 'Asap', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 section {
@@ -37,9 +38,10 @@ section:nth-of-type(2n+1) {
 }
 
 #home {
+    font-family: 'Roboto', sans-serif;
     min-height: 100vh;
     .container {
-        padding:0;
+        padding: 0;
         .logo {
             max-width: 50vw;
             margin: 0;
@@ -88,7 +90,7 @@ section:nth-of-type(2n+1) {
 #service {
     // padding: 0;
     .container {
-        padding:0;
+        padding: 0;
         @media screen and (max-width: 1024px) {}
         .row {
             margin: 1em;
@@ -102,160 +104,132 @@ section:nth-of-type(2n+1) {
             .main-title {
                 // margin-bottom: 20px;
             }
-            .col-12 {
-                .fas {
-                    @media screen and (max-width: 1024px) {
-                        margin-bottom: .3em;
-                    }
-                }
-                p {
-                    text-align: justify; // vertical-align: center;
-                    font-size: 1.3em;
-                    font-weight: 500;
-                    margin: 0;
-                    color: $cb;
-                }
+        }
+        .icon {
+            img {
+                max-height: 60px;
+                max-width: 60px;
+                color: $cw;
             }
         }
         .row:nth-of-type(n+2) {
-            background-color: $cw;
-            color: $cp;
-        }
-        .building:hover {
-            .fa-building {
-                color: $cb;
-            }
-        }
-        .leaf:hover {
-            .fa-leaf {
-                color: darkgreen;
-            }
-        }
-        .recycle:hover {
-            .fa-recycle {
-                color: orange;
-            }
-        }
-        @media screen and (max-width: 1024px) {
-            .fa-building {
-                color: $cb;
-            }
-            .fa-leaf {
-                color: darkgreen;
-            }
-            .fa-recycle {
-                color: orange;
-            }
+            // background-color: $cw;
+            color: $cw;
         }
     }
-}
-
-#whyus {
-    .container {
-        .col-12 {}
-        .mycard-holder {
-            padding: 1em;
-            .mycard {
-                border-right: 1px solid $cp;
-                border-radius: 3em; // height:60px;
-                padding: 0;
-                margin: 0;
-                .cardimg {
-                    border: 1px solid $cp;
-                    border-radius: 50px;
-                    min-height: 60px;
-                    min-width: 60px;
-                    padding: .3em;
+    #whyus {
+        .container {
+            .col-12 {}
+            .mycard-holder {
+                padding: 1em;
+                .mycard {
+                    border-right: 1px solid $cp; // border-radius: 3em; // height:60px;
+                    padding: 0;
                     margin: 0;
-                }
-                .cardtext {
-                    p {
+                    .cardimg {
+                        // border: 1px solid $cp;
+                        // border-radius: 50px;
+                        // max-height: 60px;
+                        // max-width: 60px;
+                        padding: .3em;
                         margin: 0;
-
+                        img {
+                            // max-width: 50px;
+                            max-height: 50px;
+                        }
                     }
-                }
-            }
-        }
-    }
-}
-
-#projects {}
-
-#clients {
-    .container {
-        .row {
-            .main-title {
-                margin-bottom: 20px;
-            }
-        }
-    }
-}
-
-#about {
-    .container {
-        .col-12{
-            h1{}
-            p{}
-            hr{}
-            .row{
-                .contact-info{
-                    a{
-                        margin:10px 0px;
-                    }
-                }
-                .location-info{
-                    img{
-                        max-width:100%;
-                        border:1px solid $cp;
-                    }
-                    // @media screen and (min-width:768){
-                    //     border-left: 1px solid lightgray;
-
-                    // }
-                }
-            }
-        }
-    }
-}
-
-#contact {
-    .container {
-        .row {
-            .main-title {
-                margin-bottom: 20px;
-            }
-            form {
-                width: 60%;
-                @media screen and (max-width: 1024px) {
-                    width:80%;
-                }
-                .col {
-                    .row {
-                        margin: 10px 0px;
-                        padding: 10px 0px;
-                        input:focus {
-                            background-color: $cp;
+                    .cardtext {
+                        p {
+                            margin: 0;
                         }
                     }
                 }
             }
         }
     }
-}
-
-.btn:focus,
-.btn:active,
-button:focus,
-button:active {
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-#image-gallery .modal-footer {
-    display: block;
-}
-
-.thumb {
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
+    #projects {
+        img {
+            // width:100%;
+            border: 1px solid $cw;
+        }
+    }
+    #clients {
+        .container {
+            .row {
+                .main-title {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    #about {
+        .container {
+            .col-12 {
+                h1 {}
+                p {}
+                hr {}
+                .row {
+                    .contact-info {
+                        a {
+                            margin: 10px 0px;
+                        }
+                    }
+                    .location-info {
+                        img {
+                            max-width: 100%;
+                            border: 1px solid $cp;
+                        } // @media screen and (min-width:768){
+                        //     border-left: 1px solid lightgray;
+                        // }
+                    }
+                }
+            }
+        }
+    }
+    #contact {
+        .container {
+            .row {
+                width: 100%;
+                .main-title {
+                    margin-bottom: 20px;
+                }
+                form {
+                    width: 60%;
+                    @media screen and (max-width: 1024px) {
+                        width:80%;
+                    }
+                    .col {
+                        .row {
+                            margin: 10px 0px;
+                            padding: 10px 0px;
+                            input:focus {
+                                background-color: $cw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        height: 25px;
+        text-align: center;
+        p {
+            color: $cp;
+            margin: 0;
+        }
+    }
+    .btn:focus,
+    .btn:active,
+    button:focus,
+    button:active {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    #image-gallery .modal-footer {
+        display: block;
+    }
+    .thumb {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
