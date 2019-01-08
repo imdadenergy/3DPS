@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Imdad 3d Printing Solutions">
     <title>Imdad 3D Printing Solutions</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
@@ -11,6 +12,9 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
         crossorigin="anonymous">
+        <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         var _rollbarConfig = {
             accessToken: "f020437e7c474296b521bee2a9ab6415",
@@ -24,6 +28,7 @@
         !function (r) { function e(n) { if (o[n]) return o[n].exports; var t = o[n] = { exports: {}, id: n, loaded: !1 }; return r[n].call(t.exports, t, t.exports, e), t.loaded = !0, t.exports } var o = {}; return e.m = r, e.c = o, e.p = "", e(0) }([function (r, e, o) { "use strict"; var n = o(1), t = o(4); _rollbarConfig = _rollbarConfig || {}, _rollbarConfig.rollbarJsUrl = _rollbarConfig.rollbarJsUrl || "https://cdnjs.cloudflare.com/ajax/libs/rollbar.js/2.4.6/rollbar.min.js", _rollbarConfig.async = void 0 === _rollbarConfig.async || _rollbarConfig.async; var a = n.setupShim(window, _rollbarConfig), l = t(_rollbarConfig); window.rollbar = n.Rollbar, a.loadFull(window, document, !_rollbarConfig.async, _rollbarConfig, l) }, function (r, e, o) { "use strict"; function n(r) { return function () { try { return r.apply(this, arguments) } catch (r) { try { console.error("[Rollbar]: Internal error", r) } catch (r) { } } } } function t(r, e) { this.options = r, this._rollbarOldOnError = null; var o = s++; this.shimId = function () { return o }, "undefined" != typeof window && window._rollbarShims && (window._rollbarShims[o] = { handler: e, messages: [] }) } function a(r, e) { if (r) { var o = e.globalAlias || "Rollbar"; if ("object" == typeof r[o]) return r[o]; r._rollbarShims = {}, r._rollbarWrappedError = null; var t = new p(e); return n(function () { e.captureUncaught && (t._rollbarOldOnError = r.onerror, i.captureUncaughtExceptions(r, t, !0), i.wrapGlobals(r, t, !0)), e.captureUnhandledRejections && i.captureUnhandledRejections(r, t, !0); var n = e.autoInstrument; return e.enabled !== !1 && (void 0 === n || n === !0 || "object" == typeof n && n.network) && r.addEventListener && (r.addEventListener("load", t.captureLoad.bind(t)), r.addEventListener("DOMContentLoaded", t.captureDomContentLoaded.bind(t))), r[o] = t, t })() } } function l(r) { return n(function () { var e = this, o = Array.prototype.slice.call(arguments, 0), n = { shim: e, method: r, args: o, ts: new Date }; window._rollbarShims[this.shimId()].messages.push(n) }) } var i = o(2), s = 0, d = o(3), c = function (r, e) { return new t(r, e) }, p = d.bind(null, c); t.prototype.loadFull = function (r, e, o, t, a) { var l = function () { var e; if (void 0 === r._rollbarDidLoad) { e = new Error("rollbar.js did not load"); for (var o, n, t, l, i = 0; o = r._rollbarShims[i++];)for (o = o.messages || []; n = o.shift();)for (t = n.args || [], i = 0; i < t.length; ++i)if (l = t[i], "function" == typeof l) { l(e); break } } "function" == typeof a && a(e) }, i = !1, s = e.createElement("script"), d = e.getElementsByTagName("script")[0], c = d.parentNode; s.crossOrigin = "", s.src = t.rollbarJsUrl, o || (s.async = !0), s.onload = s.onreadystatechange = n(function () { if (!(i || this.readyState && "loaded" !== this.readyState && "complete" !== this.readyState)) { s.onload = s.onreadystatechange = null; try { c.removeChild(s) } catch (r) { } i = !0, l() } }), c.insertBefore(s, d) }, t.prototype.wrap = function (r, e, o) { try { var n; if (n = "function" == typeof e ? e : function () { return e || {} }, "function" != typeof r) return r; if (r._isWrap) return r; if (!r._rollbar_wrapped && (r._rollbar_wrapped = function () { o && "function" == typeof o && o.apply(this, arguments); try { return r.apply(this, arguments) } catch (o) { var e = o; throw e && ("string" == typeof e && (e = new String(e)), e._rollbarContext = n() || {}, e._rollbarContext._wrappedSource = r.toString(), window._rollbarWrappedError = e), e } }, r._rollbar_wrapped._isWrap = !0, r.hasOwnProperty)) for (var t in r) r.hasOwnProperty(t) && (r._rollbar_wrapped[t] = r[t]); return r._rollbar_wrapped } catch (e) { return r } }; for (var u = "log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleUnhandledRejection,captureEvent,captureDomContentLoaded,captureLoad".split(","), f = 0; f < u.length; ++f)t.prototype[u[f]] = l(u[f]); r.exports = { setupShim: a, Rollbar: p } }, function (r, e) { "use strict"; function o(r, e, o) { if (r) { var t; "function" == typeof e._rollbarOldOnError ? t = e._rollbarOldOnError : r.onerror && !r.onerror.belongsToShim && (t = r.onerror, e._rollbarOldOnError = t); var a = function () { var o = Array.prototype.slice.call(arguments, 0); n(r, e, t, o) }; a.belongsToShim = o, r.onerror = a } } function n(r, e, o, n) { r._rollbarWrappedError && (n[4] || (n[4] = r._rollbarWrappedError), n[5] || (n[5] = r._rollbarWrappedError._rollbarContext), r._rollbarWrappedError = null), e.handleUncaughtException.apply(e, n), o && o.apply(r, n) } function t(r, e, o) { if (r) { "function" == typeof r._rollbarURH && r._rollbarURH.belongsToShim && r.removeEventListener("unhandledrejection", r._rollbarURH); var n = function (r) { var o, n, t; try { o = r.reason } catch (r) { o = void 0 } try { n = r.promise } catch (r) { n = "[unhandledrejection] error getting `promise` from event" } try { t = r.detail, !o && t && (o = t.reason, n = t.promise) } catch (r) { t = "[unhandledrejection] error getting `detail` from event" } o || (o = "[unhandledrejection] error getting `reason` from event"), e && e.handleUnhandledRejection && e.handleUnhandledRejection(o, n) }; n.belongsToShim = o, r._rollbarURH = n, r.addEventListener("unhandledrejection", n) } } function a(r, e, o) { if (r) { var n, t, a = "EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(","); for (n = 0; n < a.length; ++n)t = a[n], r[t] && r[t].prototype && l(e, r[t].prototype, o) } } function l(r, e, o) { if (e.hasOwnProperty && e.hasOwnProperty("addEventListener")) { for (var n = e.addEventListener; n._rollbarOldAdd && n.belongsToShim;)n = n._rollbarOldAdd; var t = function (e, o, t) { n.call(this, e, r.wrap(o), t) }; t._rollbarOldAdd = n, t.belongsToShim = o, e.addEventListener = t; for (var a = e.removeEventListener; a._rollbarOldRemove && a.belongsToShim;)a = a._rollbarOldRemove; var l = function (r, e, o) { a.call(this, r, e && e._rollbar_wrapped || e, o) }; l._rollbarOldRemove = a, l.belongsToShim = o, e.removeEventListener = l } } r.exports = { captureUncaughtExceptions: o, captureUnhandledRejections: t, wrapGlobals: a } }, function (r, e) { "use strict"; function o(r, e) { this.impl = r(e, this), this.options = e, n(o.prototype) } function n(r) { for (var e = function (r) { return function () { var e = Array.prototype.slice.call(arguments, 0); if (this.impl[r]) return this.impl[r].apply(this.impl, e) } }, o = "log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleUnhandledRejection,_createItem,wrap,loadFull,shimId,captureEvent,captureDomContentLoaded,captureLoad".split(","), n = 0; n < o.length; n++)r[o[n]] = e(o[n]) } o.prototype._swapAndProcessMessages = function (r, e) { this.impl = r(this.options); for (var o, n, t; o = e.shift();)n = o.method, t = o.args, this[n] && "function" == typeof this[n] && ("captureDomContentLoaded" === n || "captureLoad" === n ? this[n].apply(this, [t[0], o.ts]) : this[n].apply(this, t)); return this }, r.exports = o }, function (r, e) { "use strict"; r.exports = function (r) { return function (e) { if (!e && !window._rollbarInitialized) { r = r || {}; for (var o, n, t = r.globalAlias || "Rollbar", a = window.rollbar, l = function (r) { return new a(r) }, i = 0; o = window._rollbarShims[i++];)n || (n = o.handler), o.handler._swapAndProcessMessages(l, o.messages); window[t] = n, window._rollbarInitialized = !0 } } } }]);
     // End Rollbar Snippet
     </script>
+    <script src="main.js"></script>
 </head>
 <body>
     <header class="fixed-top">
@@ -79,21 +84,20 @@
                             esse molestias, sequi temporib</p> -->
                     </div>
                 </div>
-                <div class="row">
+                <div class="row building">
                     <div class="col-12 col-md-3 align-self-center"><i class="fas fa-building fa-5x"></i></div>
-                    <div class="col-12 col-md-9"><p>Specialized in architecture, we provide 3D printed architectural miniature models and prototypes as well as
+                    <div class="col-12 col-md-9 align-self-center service-description-holder"><p>Specialized in architecture, we provide 3D printed architectural miniature models and prototypes as well as
                     non-architectural models based on our customers’ requirements.</p></div>
                 </div>
-                <div class="row">
+                <div class="row leaf">
                     <d1v class="col-12 col-md-3 align-self-center order-md-2"><i class="fas fa-leaf fa-5x"></i></d1v>
-                    <div class="col-12 col-md-9 order-md-1">
-                        <p>Our products are made using lightweight durable thermoplastic materials such as ABS, PLA, HIPS, etc. which are
+                    <div class="col-12 col-md-9 align-self-center order-md-1 service-description-holder"><p>Our products are made using lightweight durable thermoplastic materials such as ABS, PLA, HIPS, etc. which are
                     recyclable, thus being environment friendly.</p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row recycle">
                     <div class="col-12 col-md-3 align-self-center"><i class="fas fa-recycle fa-5x"></i></div>
-                    <div class="col-12 col-md-9"><p>Products that are to be discarded can be sent back to us for recycling, free of charge. Therefore, they can be reused
+                    <div class="col-12 col-md-9 align-self-center service-description-holder"><p>Products that are to be discarded can be sent back to us for recycling, free of charge. Therefore, they can be reused
                     and further eliminates any hassles on waste management.</p></div>
                 </div>
             </div>
@@ -101,31 +105,166 @@
 
     </section>
     <section id="whyus" class="d-flex">
-        <div class="container row mr-auto ml-auto align-self-center justify-content-center">
-            <div class="col-12 col-md-6">
-                <div class="row justify-content-center">
-                    <div class="main-title">
-                        <h1>Why Us?</h1>
-                        <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, dolor ullam? Inventore magni excepturi ratione
-                                        esse molestias, sequi temporib</p> -->
+        <div class="container p-0 row mr-auto ml-auto align-self-center justify-content-center">
+            <div class="col-12">
+                <h1>Why Us?</h1>
+            </div>
+            <div class="mycard-holder col-12 col-md-6 col-xl-4 align-self-center">
+                <div class="row mycard">
+                    <div class="col-3 cardimg">
+                        <i  class="fas fa-wrench fa-3x img-fluid"></i>
+                    </div>
+                    <div class="col-9 cardtext align-self-center">
+                        <p>Extensive Customization</p>
                     </div>
                 </div>
-                <div class="row deck">
-
+            </div>
+            <div class="mycard-holder col-12 col-md-6 col-xl-4 align-self-center">
+                <div class="row mycard">
+                    <div class="col-3 cardimg">
+                        <i  class="fas fa-clock fa-3x"></i>
+                    </div>
+                    <div class="col-9 cardtext align-self-center">
+                        <p>High Durability</p>
+                    </div>
                 </div>
             </div>
+            <div class="mycard-holder col-12 col-md-6 col-xl-4 align-self-center">
+                <div class="row mycard">
+                    <div class="col-3 cardimg">
+                        <i  class="fas fa-dollar-sign fa-3x"></i>
+                    </div>
+                    <div class="col-9 cardtext align-self-center">
+                        <p>Cost Effective</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mycard-holder col-12 col-md-6 col-xl-4 align-self-center">
+                <div class="row mycard">
+                    <div class="col-3 cardimg">
+                        <i  class="fas fa-dice-d20 fa-3x"></i>
+                    </div>
+                    <div class="col-9 cardtext align-self-center">
+                        <p>Detailable</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mycard-holder col-12 col-md-6 col-xl-4 align-self-center">
+                <div class="row mycard">
+                    <div class="col-3 cardimg align-self-center">
+                        <i  class="fas fa-bolt fa-3x"></i>
+                    </div>
+                    <div class="col-9 cardtext align-self-center">
+                        <p>Fast Delivery</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mycard-holder col-12 col-md-6 col-xl-4 align-self-center">
+                <div class="row mycard">
+                    <div class="col-3 cardimg">
+                        <i  class="fab fa-modx fa-3x"></i>
+                    </div>
+                    <div class="col-9 cardtext align-self-center">
+                        <p>Modular Approach</p>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </section>
     <section id="projects" class="d-flex">
         <div class="row d-flex container align-self-center justify-content-center ml-auto mr-auto">
-            <div class="row justify-content-center">
-            <div class="main-title">
-                <h1>Our Projects</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, dolor ullam? Inventore magni excepturi
-                    ratione esse molestias, sequi temporib</p>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <h1>Our Projects</h1>
+                </div>
+                <div class="row">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="" data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                data-target="#image-gallery">
+                                <img class="img-thumbnail" src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                    alt="Another alt text">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="" data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                data-target="#image-gallery">
+                                <img class="img-thumbnail" src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                    alt="Another alt text">
+                            </a>
+                        </div>
+            
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="" data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                data-target="#image-gallery">
+                                <img class="img-thumbnail" src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                    alt="Another alt text">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Test1" data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                data-target="#image-gallery">
+                                <img class="img-thumbnail" src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                    alt="Another alt text">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice" data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                data-target="#image-gallery">
+                                <img class="img-thumbnail" src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                    alt="Another alt text">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice" data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                data-target="#image-gallery">
+                                <img class="img-thumbnail" src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                    alt="Another alt text">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice" data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                data-target="#image-gallery">
+                                <img class="img-thumbnail" src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                    alt="Another alt text">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice" data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                data-target="#image-gallery">
+                                <img class="img-thumbnail" src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                    alt="Another alt text">
+                            </a>
+                        </div>
+                    </div>
+        
+                    <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="image-gallery-title"></h4>
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                                            class="sr-only">Close</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img id="image-gallery-image" class="img-responsive col-md-12" src="">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i>
+                                    </button>
+            
+                                    <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i class="fa fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
     </section>
     <section id="about" class="d-flex">
         <div class="container row align-self-center justify-content-center ml-auto mr-auto">
@@ -135,8 +274,18 @@
                     Printing technology, to create a better
                     alternative to the traditional methods used in manufacturing and prototyping. We believe this could
                     certainly help us in enhancing and improving our lives in every applicable industry.</p>
-                <div class="row card-deck">
-    
+                    <hr>
+                <div class="row">
+                    <div class="col-12 col-md-6 align-self-center contact-info">
+                        <h4 class="">Reach Us..</h4>
+                        <a href="tel:+966538637823">+966-53-863-7823</a><br>
+                        <a href="mailto:info@imdadenergy.com">info@imdadenergy.com</a>
+                    </div>
+                    <div class="col-12 col-md-6 location-info">
+                        <h4>Find Us..</h4>
+                        <p>3266, Tariq Bin Ziyad Street, Qurtoba 1, Al Khobar</p>
+                        <a href="https://goo.gl/maps/Apdx4k3s5Z72"><img class="map row img-fluid m-0" src="./images/map.png" alt="Location Map"></a>
+                    </div>
                 </div>
             </div>
         </div>

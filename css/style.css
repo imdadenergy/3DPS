@@ -36,6 +36,10 @@ section:nth-of-type(2n+1) {
   min-height: 100vh;
 }
 
+#home .container {
+  padding: 0;
+}
+
 #home .container .logo {
   max-width: 50vw;
   margin: 0;
@@ -83,14 +87,33 @@ section:nth-of-type(2n+1) {
   padding: 10px 10px;
 }
 
+#service .container {
+  padding: 0;
+}
+
 #service .container .row {
   margin: 1em;
   padding: 2em;
   border-radius: 3em;
 }
 
+@media screen and (max-width: 1024px) {
+  #service .container .row {
+    padding: 2em 0em;
+    margin: 1em 0em;
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #service .container .row .col-12 .fas {
+    margin-bottom: .3em;
+  }
+}
+
 #service .container .row .col-12 p {
   text-align: justify;
+  font-size: 1.3em;
   font-weight: 500;
   margin: 0;
   color: #27245f;
@@ -101,25 +124,65 @@ section:nth-of-type(2n+1) {
   color: #ac4591;
 }
 
-#projects .container .row .main-title {
-  margin-bottom: 20px;
+#service .container .building:hover .fa-building {
+  color: #27245f;
+}
+
+#service .container .leaf:hover .fa-leaf {
+  color: darkgreen;
+}
+
+#service .container .recycle:hover .fa-recycle {
+  color: orange;
+}
+
+@media screen and (max-width: 1024px) {
+  #service .container .fa-building {
+    color: #27245f;
+  }
+  #service .container .fa-leaf {
+    color: darkgreen;
+  }
+  #service .container .fa-recycle {
+    color: orange;
+  }
+}
+
+#whyus .container .mycard-holder {
+  padding: 1em;
+}
+
+#whyus .container .mycard-holder .mycard {
+  border-right: 1px solid #ac4591;
+  border-radius: 3em;
+  padding: 0;
+  margin: 0;
+}
+
+#whyus .container .mycard-holder .mycard .cardimg {
+  border: 1px solid #ac4591;
+  border-radius: 50px;
+  min-height: 60px;
+  min-width: 60px;
+  padding: .3em;
+  margin: 0;
+}
+
+#whyus .container .mycard-holder .mycard .cardtext p {
+  margin: 0;
 }
 
 #clients .container .row .main-title {
   margin-bottom: 20px;
 }
 
-#about .container .row .main-title p {
-  text-align: justify;
+#about .container .col-12 .row .contact-info a {
+  margin: 10px 0px;
 }
 
-#about .container .row .card-group > * {
-  margin: 10px;
-}
-
-#about .container .row .card-group .card {
-  background-color: rgba(0, 0, 0, 0);
-  margin: 10px;
+#about .container .col-12 .row .location-info img {
+  max-width: 100%;
+  border: 1px solid #ac4591;
 }
 
 #contact .container .row .main-title {
@@ -143,5 +206,23 @@ section:nth-of-type(2n+1) {
 
 #contact .container .row form .col .row input:focus {
   background-color: #ac4591;
+}
+
+.btn:focus,
+.btn:active,
+button:focus,
+button:active {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+#image-gallery .modal-footer {
+  display: block;
+}
+
+.thumb {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 /*# sourceMappingURL=style.css.map */

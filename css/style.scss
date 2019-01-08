@@ -39,7 +39,7 @@ section:nth-of-type(2n+1) {
 #home {
     min-height: 100vh;
     .container {
-        // padding-top:50px;
+        padding:0;
         .logo {
             max-width: 50vw;
             margin: 0;
@@ -62,7 +62,7 @@ section:nth-of-type(2n+1) {
             a:active,
             a:focus {
                 // cursor:pointer;
-                border:none;
+                border: none;
                 text-decoration: none;
             }
             button {
@@ -71,8 +71,7 @@ section:nth-of-type(2n+1) {
                 border-color: $cb;
                 border-radius: 2em;
                 background-color: $cp;
-                color:$cw;
-                // @media screen and (max-width:1024px){
+                color: $cw; // @media screen and (max-width:1024px){
                 //     padding:0.7em 3em;
                 // }
             }
@@ -87,20 +86,34 @@ section:nth-of-type(2n+1) {
 }
 
 #service {
+    // padding: 0;
     .container {
+        padding:0;
+        @media screen and (max-width: 1024px) {}
         .row {
             margin: 1em;
             padding: 2em;
             border-radius: 3em; // border:2px solid white;
+            @media screen and (max-width: 1024px) {
+                padding:2em 0em;
+                margin: 1em 0em;
+                font-size: 0.7em;
+            }
             .main-title {
                 // margin-bottom: 20px;
             }
             .col-12 {
+                .fas {
+                    @media screen and (max-width: 1024px) {
+                        margin-bottom: .3em;
+                    }
+                }
                 p {
-                    text-align: justify;
+                    text-align: justify; // vertical-align: center;
+                    font-size: 1.3em;
                     font-weight: 500;
                     margin: 0;
-                    color:$cb;
+                    color: $cb;
                 }
             }
         }
@@ -108,18 +121,65 @@ section:nth-of-type(2n+1) {
             background-color: $cw;
             color: $cp;
         }
-    }
-}
-
-#projects {
-    .container {
-        .row {
-            .main-title {
-                margin-bottom: 20px;
+        .building:hover {
+            .fa-building {
+                color: $cb;
+            }
+        }
+        .leaf:hover {
+            .fa-leaf {
+                color: darkgreen;
+            }
+        }
+        .recycle:hover {
+            .fa-recycle {
+                color: orange;
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            .fa-building {
+                color: $cb;
+            }
+            .fa-leaf {
+                color: darkgreen;
+            }
+            .fa-recycle {
+                color: orange;
             }
         }
     }
 }
+
+#whyus {
+    .container {
+        .col-12 {}
+        .mycard-holder {
+            padding: 1em;
+            .mycard {
+                border-right: 1px solid $cp;
+                border-radius: 3em; // height:60px;
+                padding: 0;
+                margin: 0;
+                .cardimg {
+                    border: 1px solid $cp;
+                    border-radius: 50px;
+                    min-height: 60px;
+                    min-width: 60px;
+                    padding: .3em;
+                    margin: 0;
+                }
+                .cardtext {
+                    p {
+                        margin: 0;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+#projects {}
 
 #clients {
     .container {
@@ -133,25 +193,25 @@ section:nth-of-type(2n+1) {
 
 #about {
     .container {
-        .row {
-            .main-title {
-                p {
-                    text-align: justify;
-                }
-            }
-            .card-group {
-                >* {
-                    margin: 10px; // padding:10px;
-                }
-                .card {
-                    // height: 60px;
-                    background-color: rgba($color: #000000, $alpha: 0);
-                    margin: 10px;
-                    .card-img-top {}
-                    .card-body {
-                        .card-title {}
-                        .card-text {}
+        .col-12{
+            h1{}
+            p{}
+            hr{}
+            .row{
+                .contact-info{
+                    a{
+                        margin:10px 0px;
                     }
+                }
+                .location-info{
+                    img{
+                        max-width:100%;
+                        border:1px solid $cp;
+                    }
+                    // @media screen and (min-width:768){
+                    //     border-left: 1px solid lightgray;
+
+                    // }
                 }
             }
         }
@@ -181,4 +241,21 @@ section:nth-of-type(2n+1) {
             }
         }
     }
+}
+
+.btn:focus,
+.btn:active,
+button:focus,
+button:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#image-gallery .modal-footer {
+    display: block;
+}
+
+.thumb {
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
