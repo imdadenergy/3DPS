@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Asap|Roboto|Work+Sans");
+@import url("https://fonts.googleapis.com/css?family=Asap|Roboto|Work+Sans|Quicksand:300");
 html {
   scroll-behavior: smooth;
 }
 
 body {
   text-align: justify;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 section {
@@ -33,7 +33,12 @@ section:nth-of-type(2n+1) {
 }
 
 #home {
+  font-family: 'Roboto', sans-serif;
   min-height: 100vh;
+}
+
+#home .container {
+  padding: 0;
 }
 
 #home .container .logo {
@@ -83,43 +88,76 @@ section:nth-of-type(2n+1) {
   padding: 10px 10px;
 }
 
+#service .container {
+  padding: 0;
+}
+
 #service .container .row {
   margin: 1em;
   padding: 2em;
   border-radius: 3em;
 }
 
-#service .container .row .col-12 p {
-  text-align: justify;
-  font-weight: 500;
-  margin: 0;
-  color: #27245f;
+@media screen and (max-width: 1024px) {
+  #service .container .row {
+    padding: 2em 0em;
+    margin: 1em 0em;
+    font-size: 0.7em;
+  }
+}
+
+#service .container .row .col-12 img {
+  max-height: 60px;
+  max-width: 60px;
+  color: #f2f2f2;
 }
 
 #service .container .row:nth-of-type(n+2) {
-  background-color: #f2f2f2;
-  color: #ac4591;
+  color: #f2f2f2;
 }
 
-#projects .container .row .main-title {
-  margin-bottom: 20px;
+#whyus .container .mycard-holder {
+  padding: 1em;
+}
+
+#whyus .container .mycard-holder .mycard {
+  border-right: 1px solid #ac4591;
+  padding: 0;
+  margin: 0;
+}
+
+#whyus .container .mycard-holder .mycard .cardimg {
+  padding: .3em;
+  margin: 0;
+}
+
+#whyus .container .mycard-holder .mycard .cardimg img {
+  max-height: 50px;
+}
+
+#whyus .container .mycard-holder .mycard .cardtext p {
+  margin: 0;
+}
+
+#projects img {
+  border: 1px solid #f2f2f2;
 }
 
 #clients .container .row .main-title {
   margin-bottom: 20px;
 }
 
-#about .container .row .main-title p {
-  text-align: justify;
+#about .container .col-12 .row .contact-info a {
+  margin: 10px 0px;
 }
 
-#about .container .row .card-group > * {
-  margin: 10px;
+#about .container .col-12 .row .location-info img {
+  max-width: 100%;
+  border: 1px solid #ac4591;
 }
 
-#about .container .row .card-group .card {
-  background-color: rgba(0, 0, 0, 0);
-  margin: 10px;
+#contact .container .row {
+  width: 100%;
 }
 
 #contact .container .row .main-title {
@@ -142,6 +180,34 @@ section:nth-of-type(2n+1) {
 }
 
 #contact .container .row form .col .row input:focus {
-  background-color: #ac4591;
+  background-color: #f2f2f2;
+}
+
+footer {
+  height: 25px;
+  text-align: center;
+}
+
+footer p {
+  color: #ac4591;
+  margin: 0;
+}
+
+.btn:focus,
+.btn:active,
+button:focus,
+button:active {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+#image-gallery .modal-footer {
+  display: block;
+}
+
+.thumb {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 /*# sourceMappingURL=style.css.map */
