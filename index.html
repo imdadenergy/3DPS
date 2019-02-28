@@ -289,25 +289,26 @@
                     <h2><span id="contact-a"> &nbsp; </span>Contact Us</h2>
                     <hr>
                 </div>
-                <form name="sentMessage" id="contactForm" novalidate="novalidate" class="row">
-                     <div class="col">
+                <form name="sentMessage" id="contactForm" novalidate="novalidate" class="row" method="GET" action="https://script.google.com/macros/s/AKfycbyMu_xUEDsyGJfBqJ1VRH-TxQQW84mN4QDLfRIs6DRxfYaXafvv/exec">
+                     <!-- <div class="col"> -->
                         <div class="row">
                             <label for="">Name*</label>
-                            <input type="text" class="form-control" placeholder="Name" required="required">
+                            <input type="text" class="form-control" placeholder="Name" required="required" name="name">
                         </div>
                         <div class="row">
                             <label for="">Email*</label>
-                            <input type="email" class="form-control" placeholder="Email" required="required">
+                            <input type="email" class="form-control" placeholder="Email" required="required" name="email">
                         </div>
                         <div class="row">
                             <label for="">Phone Number</label>
-                            <input type="tel" class="form-control" placeholder="Phone Number">
+                            <input type="tel" class="form-control" placeholder="Phone Number" name="phone">
                         </div>
                         <div class="row">
                             <label for="">Message*</label>
-                            <textarea rows="5" class="form-control" placeholder="Message" required="required" data-validation-required-message="Please enter a message"></textarea>
+                            <textarea rows="5" class="form-control" placeholder="Message" required="required" data-validation-required-message="Please enter a message" name="message"></textarea>
                         </div>
-                    </div>
+                        <button type="submit" id="submit-form">Send</button>
+                    <!-- </div> -->
                 </form>
             </div>
         </div>
