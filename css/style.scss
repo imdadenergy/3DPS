@@ -2,14 +2,8 @@
 $cb:#27245f;
 $cp:#ac4591;
 $cw:#f2f2f2;
-html {
-    // scroll-behavior: smooth;
-}
-
 body {
-    text-align: justify; // font-family: 'Roboto', sans-serif; 
-    // font-family: 'Work Sans', sans-serif;
-    // font-family: 'Asap', sans-serif;
+    text-align: justify; 
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -20,21 +14,15 @@ body {
 }
 
 section {
-    // max-height: 100vh;
-    // width: 100vw;
     background-color: $cw;
     text-align: center;
-    // padding-top: 80px;
     padding-bottom: 40px;
     @media screen and (max-width: 1024px) {
-        // max-height: 200vh;
         padding: 1em;
-        // padding-top: 70px;
         grid-gap: 0;
     }
     h2 span {
         margin-top: -60px;
-        /* Size of fixed header */
         padding-bottom: 60px;
         display: block;
     }
@@ -49,18 +37,6 @@ section:nth-of-type(2n+1) {
     color: $cb;
 }
 
-// $title-font: "Work Sans",
-// sans-serif;
-// html,
-// body,
-// main {
-//     margin: 0;
-//     padding: 0;
-//     background-color: #f2f2f2;
-// }
-// * {
-//     font-family: $title-font;
-// }
 #vis {
     position: fixed;
     z-index: -1;
@@ -69,7 +45,6 @@ section:nth-of-type(2n+1) {
 }
 
 #home {
-    // background-color: rgba($color: #000000, $alpha: 0);
     font-family: 'Roboto', sans-serif;
     min-height: 100vh;
     .container {
@@ -78,7 +53,6 @@ section:nth-of-type(2n+1) {
         .logo {
             max-width: 50vw;
             margin: 0;
-            @media screen and (max-width: ) {}
         }
         .description {
             font-family: 'Work Sans', sans-serif;
@@ -86,7 +60,7 @@ section:nth-of-type(2n+1) {
             margin: 0;
             h1 {
                 color: $cp;
-                text-align: justify; // color: $cp;
+                text-align: justify;
                 font-size: 2em;
                 font-weight: 500;
                 text-align: center;
@@ -97,7 +71,6 @@ section:nth-of-type(2n+1) {
             a:hover,
             a:active,
             a:focus {
-                // cursor:pointer;
                 border: none;
                 text-decoration: none;
             }
@@ -107,9 +80,7 @@ section:nth-of-type(2n+1) {
                 border-color: $cb;
                 border-radius: 2em;
                 background-color: $cp;
-                color: $cw; // @media screen and (max-width:1024px){
-                //     padding:0.7em 3em;
-                // }
+                color: $cw; 
             }
             button:hover {
                 cursor: pointer;
@@ -122,21 +93,14 @@ section:nth-of-type(2n+1) {
 }
 
 #service {
-    // padding: 0;
     .container {
         padding: 0;
         @media screen and (max-width: 1024px) {}
         .row {
-            // margin: 1em;
-            border-radius: 3em; // border:2px solid white;
+            border-radius: 3em; 
             font-size: 1.3em;
             @media screen and (max-width: 1024px) {
-                // padding:2em 0em;
-                // margin: 1em 0em;
                 font-size: 1.3em;
-            }
-            .main-title {
-                // margin-bottom: 20px;
             }
         }
         .icon {
@@ -147,7 +111,6 @@ section:nth-of-type(2n+1) {
             }
         }
         .row:nth-of-type(n+2) {
-            // background-color: $cw;
             color: $cw;
             padding: 2em;
         }
@@ -156,22 +119,16 @@ section:nth-of-type(2n+1) {
 
 #whyus {
     .container {
-        .col-12 {}
         .mycard-holder {
             padding: 1em;
             .mycard {
-                border-right: 1px solid $cp; // border-radius: 3em; // height:60px;
+                border-right: 1px solid $cp;
                 padding: 0;
                 margin: 0;
                 .cardimg {
-                    // border: 1px solid $cp;
-                    // border-radius: 50px;
-                    // max-height: 60px;
-                    // max-width: 60px;
                     padding: .3em;
                     margin: 0;
                     img {
-                        // max-width: 50px;
                         max-height: 50px;
                     }
                 }
@@ -190,23 +147,14 @@ section:nth-of-type(2n+1) {
     .col-6 {
         @media screen and (max-width: 768px) {
             margin: 5px 0px;
-            padding: 0px 5px; //     max-width:200px;
+            padding: 0px 5px; 
         }
     }
     img {
-        // width:100%;
         min-width: 20px;
         min-height: 10px;
         background-color: $cw;
         border: 1px solid $cw;
-
-        // &:hover{
-        //     opacity: 0.5;
-        //     cursor: pointer;
-        // }
-        // &:active{
-        //     opacity: 0.4;
-        // }
     }
 }
 
@@ -223,18 +171,11 @@ section:nth-of-type(2n+1) {
 #about {
     .container {
         .col-12 {
-            // margin-top:30px;
-            h2 {
-                span{
-                    // padding-bottom:80px;
-                }
-            }
             .mission {
                 padding:50px 0px;
                 font-size: 1.5em;
                 text-align: justify;
             }
-            hr {}
             .row {
                 .col-12{
                     padding:20px 0px;
@@ -249,9 +190,7 @@ section:nth-of-type(2n+1) {
                     img {
                         max-width: 100%;
                         border: 1px solid $cp;
-                    } // @media screen and (min-width:768){
-                    //     border-left: 1px solid lightgray;
-                    // }
+                    }
                 }
             }
         }
