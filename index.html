@@ -9,6 +9,8 @@
 
     <!-- local CSS -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/wa-mediabox.min.css">
+    <script src="./js/wa-mediabox.min.js"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
@@ -21,6 +23,7 @@
     <!-- Lightbox CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.css" />
 
+    <script src="./js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.2.1/dist/smooth-scroll.polyfills.min.js"></script>
 
 </head>
@@ -176,83 +179,34 @@
                     <h2><span id="projects-a"> &nbsp; </span>Our Projects</h2>
                 </div>
                 <hr>
-                <div class="row">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-4 col-xs-6 col-6 thumb">
-                            <a class="thumbnail" href="https://res.cloudinary.com/totallycurious/image/upload/c_fill,h_300,w_400/v1548092514/imdad3dps/1.jpg" data-image-id="" data-toggle="modal"  
-                                data-target="#image-gallery"data-lightbox="roadtrip">
-                            </a>
-                            <img class="thumbnail img-fluid" src="https://res.cloudinary.com/totallycurious/image/upload/c_fill,h_300,w_400/v1548092514/imdad3dps/1.jpg" alt="">
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6 col-6 thumb">
-                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal"  
-                                data-target="#image-gallery">
-                            </a>
-                            <img class="thumbnail img-fluid" src="https://res.cloudinary.com/totallycurious/image/upload/c_fill,h_300,w_400/v1548092514/imdad3dps/2.jpg" alt="">
-                        </div>
-            
-                        <div class="col-lg-3 col-md-4 col-xs-6 col-6 thumb">
-                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal"  
-                                data-target="#image-gallery">
-                            </a>
-                            <img class="thumbnail img-fluid" src="https://res.cloudinary.com/totallycurious/image/upload/c_fill,h_300,w_400/v1548092514/imdad3dps/3.jpg" alt="">
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6 col-6 thumb">
-                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal"  
-                                data-target="#image-gallery">
-                            </a>
-                            <img class="thumbnail img-fluid" src="https://res.cloudinary.com/totallycurious/image/upload/c_fill,h_300,w_400/v1548092514/imdad3dps/4.jpg" alt="">
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6 col-6 thumb">
-                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" 
-                                data-target="#image-gallery">
-                            </a>
-                            <img class="thumbnail img-fluid" src="https://res.cloudinary.com/totallycurious/image/upload/c_fill,h_300,w_400/v1548092514/imdad3dps/5.jpg" alt="">
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6 col-6 thumb">
-                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" 
-                                data-target="#image-gallery">
-                            </a>
-                            <img class="thumbnail img-fluid" src="https://res.cloudinary.com/totallycurious/image/upload/c_fill,h_300,w_400/v1548092514/imdad3dps/6.jpg" alt="">
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6 col-6 thumb">
-                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" 
-                                data-target="#image-gallery">
-                            </a>
-                            <img class="thumbnail img-fluid" src="https://res.cloudinary.com/totallycurious/image/upload/c_fill,h_300,w_400/v1548092514/imdad3dps/7.jpg" alt="">
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6 col-6 thumb">
-                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" 
-                                data-target="#image-gallery">
-                            </a>
-                            <img class="thumbnail img-fluid" src="https://res.cloudinary.com/totallycurious/image/upload/c_fill,h_300,w_400/v1548092514/imdad3dps/8.jpg" alt="">
-                        </div>
+                    <div class="gallery row" id="gallery">
+
+                        <a class="col-lg-3 col-md-4 col-xs-6 col-6 thumb"href="https://res.cloudinary.com/totallycurious/image/upload/c_fill/v1548092514/imdad3dps/1.jpg" data-mediabox="gallery-1" data-title="">
+                            <img class="thumbnail img-fluid" src="https://res.cloudinary.com/totallycurious/image/upload/c_fill,h_300,w_400/v1548092514/imdad3dps/1.jpg" alt="Image 1">
+                        </a>
+                        <a class="col-lg-3 col-md-4 col-xs-6 col-6 thumb"href="https://res.cloudinary.com/totallycurious/image/upload/c_fill/v1548092514/imdad3dps/2.jpg" data-mediabox="gallery-1" data-title="">
+                            <img class="thumbnail img-fluid" src="https://res.cloudinary.com/totallycurious/image/upload/c_fill,h_300,w_400/v1548092514/imdad3dps/2.jpg" alt="Image 1">
+                        </a>
+                        <a class="col-lg-3 col-md-4 col-xs-6 col-6 thumb"href="https://res.cloudinary.com/totallycurious/image/upload/c_fill/v1548092514/imdad3dps/3.jpg" data-mediabox="gallery-1" data-title="">
+                            <img class="thumbnail img-fluid" src="https://res.cloudinary.com/totallycurious/image/upload/c_fill,h_300,w_400/v1548092514/imdad3dps/3.jpg" alt="Image 1">
+                        </a>
+                        <a class="col-lg-3 col-md-4 col-xs-6 col-6 thumb"href="https://res.cloudinary.com/totallycurious/image/upload/c_fill/v1548092514/imdad3dps/4.jpg" data-mediabox="gallery-1" data-title="">
+                            <img class="thumbnail img-fluid" src="https://res.cloudinary.com/totallycurious/image/upload/c_fill,h_300,w_400/v1548092514/imdad3dps/4.jpg" alt="Image 1">
+                        </a>
+                        <a class="col-lg-3 col-md-4 col-xs-6 col-6 thumb"href="https://res.cloudinary.com/totallycurious/image/upload/c_fill/v1548092514/imdad3dps/5.jpg" data-mediabox="gallery-1" data-title="">
+                            <img class="thumbnail img-fluid" src="https://res.cloudinary.com/totallycurious/image/upload/c_fill,h_300,w_400/v1548092514/imdad3dps/5.jpg" alt="Image 1">
+                        </a>
+                        <a class="col-lg-3 col-md-4 col-xs-6 col-6 thumb"href="https://res.cloudinary.com/totallycurious/image/upload/c_fill/v1548092514/imdad3dps/6.jpg" data-mediabox="gallery-1" data-title="">
+                            <img class="thumbnail img-fluid" src="https://res.cloudinary.com/totallycurious/image/upload/c_fill,h_300,w_400/v1548092514/imdad3dps/6.jpg" alt="Image 1">
+                        </a>
+                        <a class="col-lg-3 col-md-4 col-xs-6 col-6 thumb"href="https://res.cloudinary.com/totallycurious/image/upload/c_fill/v1548092514/imdad3dps/7.jpg" data-mediabox="gallery-1" data-title="">
+                            <img class="thumbnail img-fluid" src="https://res.cloudinary.com/totallycurious/image/upload/c_fill,h_300,w_400/v1548092514/imdad3dps/7.jpg" alt="Image 1">
+                        </a>
+                        <a class="col-lg-3 col-md-4 col-xs-6 col-6 thumb"href="https://res.cloudinary.com/totallycurious/image/upload/c_fill/v1548092514/imdad3dps/8.jpg" data-mediabox="gallery-1" data-title="">
+                            <img class="thumbnail img-fluid" src="https://res.cloudinary.com/totallycurious/image/upload/c_fill,h_300,w_400/v1548092514/imdad3dps/8.jpg" alt="Image 1">
+                        </a>
+
                     </div>
-        
-                    <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title" id="image-gallery-title"></h4>
-                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
-                                            class="sr-only">Close</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <img id="image-gallery-image" class="img-responsive col-md-12" src="">
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i>
-                                    </button>
-            
-                                    <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i class="fa fa-arrow-right"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -624,11 +578,5 @@
     <!-- nicescroll script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.js"></script>
 
-    <!-- d3 script -->
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-
-    <!-- popper script -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script> -->
 </body>
 </html>
