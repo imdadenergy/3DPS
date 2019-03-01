@@ -21,6 +21,8 @@
     <!-- Lightbox CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.css" />
 
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.2.1/dist/smooth-scroll.polyfills.min.js"></script>
+
 </head>
 <body>
     <header class="fixed-top">
@@ -33,10 +35,10 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Home</a>
+                        <a data-scroll href="#" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#service-a" class="nav-link">Services</a>
+                        <a data-scroll href="#service-a" class="nav-link">Services</a>
                     </li>
                     <li class="nav-item">
                         <a href="#projects-a" class="nav-link">Projects</a>
@@ -307,7 +309,7 @@
                             <label for="">Message*</label>
                             <textarea rows="5" class="form-control" placeholder="Message" required="required" data-validation-required-message="Please enter a message" name="message"></textarea>
                         </div>
-                        <button type="submit" id="submit-form">Send</button>
+                        <button class="btn ml-auto mr-auto" type="submit" id="submit-form">Submit</button>
                     <!-- </div> -->
                 </form>
             </div>
@@ -328,7 +330,10 @@
         <p>All rights reserved.</p>
     </footer>
 
-    
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+
     <!-- jQuery script -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
